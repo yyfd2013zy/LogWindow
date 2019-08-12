@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/popup_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#70000000"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:focusableInTouchMode="true"
+            android:focusable="true">
+
+            <Button
+                android:id="@+id/btn_hide_show"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:text="关闭"
+                android:textSize="8dp" />
+
+            <Switch
+                android:id="@+id/btn_aotu_scroll"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btn_hide_show"
+                android:text="滚动"
+                android:textSize="8dp"
+                android:textColor="#06EB00" />
+
+            <TextView
+                android:id="@+id/tv_net_speed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#06EB00"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_clear_log"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/tv_net_speed"
+                android:text="清屏"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/et_tag"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:text="TAG过滤"
+                android:textSize="8dp"
+                android:layout_toRightOf="@+id/btn_clear_log"/>
+
+
+            <Button
+                android:id="@+id/et_clear_tag"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:text="取消过滤"
+                android:textSize="8dp"
+                android:layout_toRightOf="@+id/btn_clear_log"/>
+        </LinearLayout>
+
+
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_top"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@android:color/holo_red_light"
+            android:scrollbarSize="5dp">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:text="logInfo:"
+                    android:textColor="#06EB00" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
