@@ -91,7 +91,7 @@ public class WindowUtils implements View.OnClickListener {
         mView = setUpView(context);
         final LayoutParams params = new LayoutParams();
         // 窗口类型
-        if (Build.VERSION.SDK_INT >= 25) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             params.type = LayoutParams.TYPE_APPLICATION_OVERLAY;
         } else {
             params.type = LayoutParams.TYPE_SYSTEM_ALERT;
