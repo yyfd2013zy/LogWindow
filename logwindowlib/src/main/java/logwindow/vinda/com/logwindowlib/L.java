@@ -13,21 +13,21 @@ public class L {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo(tag,msg);
         }
-        LOGGER.info(tag + "---->" + msg);
+        LOGGER.info("PID = "+android.os.Process.myPid()+" /LogInfo "+tag + "---->" + msg);
     }
 
     public static void i(String msg) {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo("",msg);
         }
-        LOGGER.info(msg);
+        LOGGER.info("PID = "+android.os.Process.myPid()+" /LogInfo "+msg);
     }
 
     public static void d(String tag, String msg) {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo(tag,msg);
         }
-        LOGGER.debug(tag + "---->" + msg);
+        LOGGER.debug("PID = "+android.os.Process.myPid()+" /LogInfo "+tag + "---->" + msg);
     }
 
     public static void dInDebug(String tag, String msg) {
@@ -35,7 +35,7 @@ public class L {
             LogWindowService.windowUtils.showInfo(tag,msg);
         }
         if (BuildConfig.DEBUG) {
-            LOGGER.debug(tag + "---->" + msg);
+            LOGGER.debug("PID = "+android.os.Process.myPid()+" /LogInfo "+tag + "---->" + msg);
         }
     }
 
@@ -43,21 +43,21 @@ public class L {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo("",msg);
         }
-        LOGGER.debug(msg);
+        LOGGER.debug("PID = "+android.os.Process.myPid()+" /LogInfo "+msg);
     }
 
     public static void e(String tag, String msg) {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo("",msg);
         }
-        LOGGER.error(tag + "---->" + msg);
+        LOGGER.error("PID = "+android.os.Process.myPid()+" /LogInfo "+tag + "---->" + msg);
     }
 
     public static void e(String msg) {
         if (LogWindowService.windowUtils != null) {
             LogWindowService.windowUtils.showInfo("",msg);
         }
-        LOGGER.error(msg);
+        LOGGER.error("PID = "+android.os.Process.myPid()+" /LogInfo "+msg);
     }
 
 }
